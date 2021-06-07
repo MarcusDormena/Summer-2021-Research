@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+import numpy as np
+data=np.loadtxt("/Users/astrocomnyc/Desktop/MarcusSummerResearch/times.list")
+x = data[:,0] # stores the first column in the x array
+y = data[:,1] # stores the second column in the y array
+plt.plot(x,y,'.')
+
+plt.xlabel("Time (Gigayears)")
+plt.ylabel("Redshift")
+plt.title("Time vs. Redshift")
+plt.show()
