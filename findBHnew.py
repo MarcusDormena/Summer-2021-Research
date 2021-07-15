@@ -45,5 +45,5 @@ BHz1 = BHposition[[0],2]
 BHz2 = BHposition[[1],2]
 
 #Distance formula for absolute magnitude
-distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2))**0.5
+distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
 print("The distance from the Black Hole and the Galaxy center is ", distance)
