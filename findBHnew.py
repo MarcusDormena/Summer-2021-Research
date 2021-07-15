@@ -13,14 +13,14 @@ def findBH(s):
     BH = s.stars[BHfilter]
     return BH
 BH = findBH(s)
-print("The number of Black Holes is ",len(BH))
+print("The number of Black Holes is",len(BH))
 
 #Function to find which halo (galaxy) the BH is in:
 def findBHhalos(s):
     BHhalos = BH['amiga.grp']
     return BHhalos
 BHhalos = findBHhalos(s)
-print("Here are the Black Hole locations: ",BHhalos)
+print("Here are the Black Hole locations:",BHhalos)
 
 #This will find the distance BH is from galaxy center:
 with pynbody.analysis.halo.center(h[4], mode='hyb'):
@@ -32,7 +32,7 @@ print('pos')
 
 #position of BH:
 BHposition = BH['pos']
-print("The Black Hole's position is ", BHposition)
+print("The Black Hole's position is", BHposition)
 
 #To put x,y, and z values into columns:
 BHx1 = BHposition[[0],0]
