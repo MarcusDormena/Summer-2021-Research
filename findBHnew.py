@@ -12,16 +12,15 @@ def findBH(s):
     BHfilter = pynbody.filt.LowPass('tform', 0.0)
     BH = s.stars[BHfilter]
     return BH
+BH = findBH(s)
+print("The number of Black Holes is: ",len(BH))
 
 BH = findBH(s)
 print(BH)
 
-#To find the number of BH's
-def findBH(s):
-    BHfilter = np.where((s.stars['iord']==60352791)|
-                        (s.stars['iord']==60354588))
-    BH = s.stars[BHfilter]
-    return BH
-BH = findBH(s)
-print("The number of Black Holes is: ",len(BH))
-
+#Function to find which halo (galaxy) the BH is in
+def findBHhalos(s):
+    BH = findBH(s)
+    BHhalos = BH['amiga.grp']
+    return BHhalos
+print(BHhalos)
