@@ -20,4 +20,4 @@ def findBHhalos(s):
     BHhalos = BH['amiga.grp']
     return BHhalos
 BHhalos = findBHhalos(s)
-print(BHhalos)
+print("Here are the Black Hole locations: ",BHhalos)
