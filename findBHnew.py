@@ -5,7 +5,7 @@ from pynbody import filt, array
 
 s=pynbody.load('/mnt/data0/jillian/h258/stampedetesting/glenna/take2/h258.cosmo50cmb.3072gst1bwdK1BH.000048')
 h=s.halos()
-s.physical_units()
+s.physical_units
 
 #function to find black holes:
 def findBH(s):
@@ -46,4 +46,4 @@ BHz2 = BHposition[[1],2]
 
 #Distance formula for absolute magnitude
 distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
-print("The distance from the Black Hole and the Galaxy center is ", distance)
+print("The distance from the Black Hole and the Galaxy center is ", distance, "kiloparsecs.")
