@@ -32,7 +32,7 @@ with pynbody.analysis.halo.center(h[4], mode='hyb'):
 
 #position of BH:
 BHposition = BH['pos']
-print("The Black Hole's position is", BHposition)
+print("The Black Hole's position is", \\BHposition)
 
 #To put x,y, and z values into columns:
 #BHx1 = BHposition[[0],0]
