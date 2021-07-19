@@ -51,7 +51,8 @@ print("The distance from the Black Hole and the Galaxy center is ", distance, "k
 
 #Table with BH ID#, Host Galaxy, and Distance from Center
 #newArray = array with ID#, galaxy, and distance. aka array of arrays
-#, BHhalos, distance 
+# BH?, BHhalos, distance 
 newArray = 
-df = pd.DataFrame(data=newArray, columns=['Black Hole ID#','Host Galaxy','Distance(kpc)'])
+df = pd.DataFrame(data=newArray, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
 print(df)
+print(BH)
