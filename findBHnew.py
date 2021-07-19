@@ -50,5 +50,5 @@ distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
 print("The distance from the Black Hole and the Galaxy center is ", distance, "kiloparsecs.")
 
 #Table with BH ID#, Host Galaxy, and Distance from Center
-df = pd.DataFrame(data=BHposition, columns=['Black Hole ID#','Host Galaxy','Distance(kpc)']
+df = pd.DataFrame(data=BHposition, columns=['Black Hole ID#','Host Galaxy','Distance(kpc)'])
 print(df)
