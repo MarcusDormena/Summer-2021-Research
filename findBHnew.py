@@ -35,14 +35,14 @@ BHposition = BH['pos']
 print("The Black Hole's position is", BHposition)
 
 #To put x,y, and z values into columns:
-BHx1 = BHposition[[0],0]
-BHx2 = BHposition[[1],0]
+#BHx1 = BHposition[[0],0]
+#BHx2 = BHposition[[1],0]
 
-BHy1 = BHposition[[0],1]
-BHy2 = BHposition[[1],1]
+#BHy1 = BHposition[[0],1]
+#BHy2 = BHposition[[1],1]
 
-BHz1 = BHposition[[0],2]
-BHz2 = BHposition[[1],2]
+#BHz1 = BHposition[[0],2]
+#BHz2 = BHposition[[1],2]
 
 #Distance formula for absolute magnitude
 distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
