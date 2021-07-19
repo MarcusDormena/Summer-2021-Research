@@ -28,7 +28,7 @@ with pynbody.analysis.halo.center(h[4], mode='hyb'):
     print(h[4]['pos'][1])
     print(h[4]['pos'][2])
 
-print(pos)
+#print('pos')
 
 #position of BH:
 BHposition = BH['pos']
