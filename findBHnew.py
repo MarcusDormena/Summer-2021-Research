@@ -2,6 +2,7 @@ import numpy as np
 import pynbody
 import matplotlib.pyplot as plt
 from pynbody import filt, array
+import pandas as pd
 
 s=pynbody.load('/mnt/data0/jillian/h258/stampedetesting/glenna/take2/h258.cosmo50cmb.3072gst1bwdK1BH.000048')
 h=s.halos()
@@ -32,20 +33,22 @@ with pynbody.analysis.halo.center(h[4], mode='hyb'):
 
 #position of BH:
 BHposition = BH['pos']
-print("The Black Hole's position is", \\BHposition)
+print("The Black Hole's position is", BHposition)
 
 #To put x,y, and z values into columns:
-#BHx1 = BHposition[[0],0]
-#BHx2 = BHposition[[1],0]
+BHx1 = BHposition[[0],0]
+BHx2 = BHposition[[1],0]
 
-#BHy1 = BHposition[[0],1]
-#BHy2 = BHposition[[1],1]
+BHy1 = BHposition[[0],1]
+BHy2 = BHposition[[1],1]
 
-#BHz1 = BHposition[[0],2]
-#BHz2 = BHposition[[1],2]
+BHz1 = BHposition[[0],2]
+BHz2 = BHposition[[1],2]
 
 #Distance formula for absolute magnitude
 distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
 print("The distance from the Black Hole and the Galaxy center is ", distance, "kiloparsecs.")
 
 #Table with BH ID#, Host Galaxy, and Distance from Center
+df = pd.DataFrame(data=array, columns=['Black Hole ID#','Host Galaxy','Distance(kpc)']
+print(df)
