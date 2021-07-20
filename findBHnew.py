@@ -26,9 +26,11 @@ print("Here are the Black Hole locations:",BHhalos)
 #This will find the distance BH is from galaxy center:
 with pynbody.analysis.halo.center(h[4], mode='hyb'):
 #insert for loop here:
-    n=0
-    for n in range(21):
-        print(h[4]['pos'][n]), n=n+1
+    for n in range (21):
+        print(h[4]['pos'][n])
+    #n=20
+    #for n in range(0, n):
+        #print(h[4]['pos'][n]), n=n+1
     #print(h[4]['pos'][0])
     #print(h[4]['pos'][1])
     #print(h[4]['pos'][2])
