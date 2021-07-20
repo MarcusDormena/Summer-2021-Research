@@ -25,11 +25,13 @@ print("Here are the Black Hole locations:",BHhalos)
 
 #This will find the distance BH is from galaxy center:
 with pynbody.analysis.halo.center(h[4], mode='hyb'):
-    print(h[4]['pos'][0])
-    print(h[4]['pos'][1])
-    print(h[4]['pos'][2])
-
-#print('pos')
+#insert for loop here:
+    n=0
+    #for n<=20:
+    print(h[4]['pos'][n]), n++
+    #print(h[4]['pos'][0])
+    #print(h[4]['pos'][1])
+    #print(h[4]['pos'][2])
 
 #position of BH:
 BHposition = BH['pos']
@@ -47,12 +49,12 @@ BHz2 = BHposition[[1],2]
 
 #Distance formula for absolute magnitude
 distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
-print("The distance from the Black Hole and the Galaxy center is ", distance, "kiloparsecs.")
+print("The distance between the Black Hole and the Galaxy center is ", distance, "kiloparsecs.")
 
 #Table with BH ID#, Host Galaxy, and Distance from Center
 #newArray = array with ID#, galaxy, and distance. aka array of arrays
 # BH?, BHhalos, distance 
-newArray = 
-df = pd.DataFrame(data=newArray, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
-print(df)
+#newArray = 
+#df = pd.DataFrame(data=newArray, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
+#print(df)
 print(BH)
