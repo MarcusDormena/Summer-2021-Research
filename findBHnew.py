@@ -21,25 +21,21 @@ def findBHhalos(s):
     BHhalos = BH['amiga.grp']
     return BHhalos
 BHhalos = findBHhalos(s)
-print("Here are the Black Hole locations:",BHhalos)
 
-#This will find the distance BH is from galaxy center:
+#To find how far BH's are from thier galaxy's center:
+#This array should be 21 rows x 3 columns!!!!
 with pynbody.analysis.halo.center(h[4], mode='hyb'):
-#insert for loop here:
-df = pd.DataFrame(data=BHhalos, columns=['x','y','z'])
-    for n in range (21):
-        print(df)
-        #print(h[4]['pos'][n])
-    #n=20
-    #for n in range(0, n):
-        #print(h[4]['pos'][n]), n=n+1
+
+    df = pd.DataFrame(data=BHhalos, columns=['Galaxy'])
+    print("These are the galaxies in which each Black Hole is in:" ,h[4]['pos'][0],h[4]['pos'][1], h[4]['pos'][2])
+
     #print(h[4]['pos'][0])
     #print(h[4]['pos'][1])
     #print(h[4]['pos'][2])
-
+#Above, [0],[1], and [2] mean x, y, and z respectively. Not sure about h[4] though
 #position of BH:
 BHposition = BH['pos']
-print("The Black Hole's position is", BHposition)
+print("Here are the Black Hole Positions:", BHposition)
 
 #To put x,y, and z values into columns:
 BHx1 = BHposition[[0],0]
@@ -51,7 +47,7 @@ BHy2 = BHposition[[1],1]
 BHz1 = BHposition[[0],2]
 BHz2 = BHposition[[1],2]
 
-#Distance formula for absolute magnitude
+#Distance formula
 distance = ((BHx2-BHx1)**2+(BHy2-BHy1)**2+(BHz2-BHz1)**2)**0.5
 print("The distance between the Black Hole and the Galaxy center is ", distance, "kiloparsecs.")
 
