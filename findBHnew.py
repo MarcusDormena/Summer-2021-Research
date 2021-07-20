@@ -27,8 +27,8 @@ print("Here are the Black Hole locations:",BHhalos)
 with pynbody.analysis.halo.center(h[4], mode='hyb'):
 #insert for loop here:
     n=0
-    #for n<=20:
-    print(h[4]['pos'][n]), n++
+    for n in range(21):
+        print(h[4]['pos'][n]), n=n+1
     #print(h[4]['pos'][0])
     #print(h[4]['pos'][1])
     #print(h[4]['pos'][2])
