@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from pynbody import filt, array
 import pandas as pd
 
-newArray=[21,3]
+data=[21,3]
 s=pynbody.load('/mnt/data0/jillian/h258/stampedetesting/glenna/take2/h258.cosmo50cmb.3072gst1bwdK1BH.000048')
 h=s.halos()
 s.physical_units()
@@ -23,21 +23,31 @@ def findBHhalos(s):
     return BHhalos
 
 BHhalos = findBHhalos(s)
-print(BHhalos)
+print("These are the galaxies:", BHhalos)
+
+#distance=np.zeros(len(BH))
+#BHhalos_array=np.zeros(len(BH))
+#BH_iord=np.zeros(len(BH))
+data=np.zeros((3,len(BH)))
+print(data.shape)
+              
+#This will skip all of the "0" galaxies because the zeros will mess the code up
 for i in range(len(BH)):
     if BHhalos[i] ==0:
         continue
-    #print(BHhalos[i])
     pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
+#Will print the successive galaxies's coordinates
     x=BH['pos'][[i],0]
     y=BH['pos'][[i],1]
     z=BH['pos'][[i],2]
-    distance = (x**2+y**2+z**2)**0.5
-    data = BH['iord'][i], BHhalos[i], distance[0]
-    print(data)
+    data[2][i] = ((x**2+y**2+z**2)**0.5)[0]
+    data[0][i]= BH['iord'][i]
+    data[1][i]=BHhalos[i]
 
-# BH?, BHhalos, distance 
-#df2 = pd.DataFrame(data=newArray, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
-#print(df2)
-#print(BH)
+    
+data=np.transpose(data)
+df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
+df=df[df['Host Galaxy']!=0]
+print(df)
+
 
