@@ -31,7 +31,7 @@ data=np.zeros((3,len(BH)))
 #print(data.shape)
               
 #This will skip all of the "0" galaxies because the zeros will mess the code up
-f = open("findingBH.txt", "w")
+f = open("findingBH.txt", "a")
 for i in range(len(BH)):
     if BHhalos[i] ==0:
         continue
@@ -46,5 +46,7 @@ for i in range(len(BH)):
 data=np.transpose(data)
 df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
 df=df[df['Host Galaxy']!=0]
+df=str(df)
 print(df)
+f.write(df)
 f.close()
