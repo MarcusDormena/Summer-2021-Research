@@ -27,7 +27,8 @@ BHhalos = findBHhalos(s)
 #distance=np.zeros(len(BH))
 #BHhalos_array=np.zeros(len(BH))
 #BH_iord=np.zeros(len(BH))
-data=np.zeros((3,len(BH)))
+#For data, the number before len is the number of columns you want
+data=np.zeros((4,len(BH)))
 #print(data.shape)
               
 #This will skip all of the "0" galaxies because the zeros will mess the code up
@@ -39,10 +40,11 @@ for i in range(len(BH)):
     x=BH['pos'][[i],0]
     y=BH['pos'][[i],1]
     z=BH['pos'][[i],2]
+    starmass = h[BHhalos[i]].s['mass'].sum()
     data[0][i] = BH['iord'][i]
     data[1][i] = BHhalos[i]
     data[2][i] = ((x**2+y**2+z**2)**0.5)[0]
-    data[3][i] = 
+    data[3][i] = starmass
 data=np.transpose(data)
 df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
 df=df[df['Host Galaxy']!=0]
