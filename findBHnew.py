@@ -39,12 +39,12 @@ for i in range(len(BH)):
     x=BH['pos'][[i],0]
     y=BH['pos'][[i],1]
     z=BH['pos'][[i],2]
-    data[0][i]= BH['iord'][i]
-    data[1][i]=BHhalos[i]
+    data[0][i] = BH['iord'][i]
+    data[1][i] = BHhalos[i]
     data[2][i] = ((x**2+y**2+z**2)**0.5)[0]
-
+    data[3][i] = 
 data=np.transpose(data)
-df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)'])
+df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
 df=df[df['Host Galaxy']!=0]
 df=str(df)
 print(df)
