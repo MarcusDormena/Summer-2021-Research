@@ -5,10 +5,10 @@ from pynbody import filt, array
 import pandas as pd
 
 s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000192/h242.cosmo50PLK.3072gst5HbwK1BH.000192')
-#s=pynbody.load('/mnt/data0/jillian/h258/stampedetesting/glenna/take2/h258.cosmo50cmb.3072gst1bwdK1BH.000048')
 h=s.halos()
 s.physical_units()
-
+print(pynbody.analysis.cosmology.age(s),"Gyrs old")
+print("Redshift:",s.properties['z'])
 #function to find black holes:
 def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
