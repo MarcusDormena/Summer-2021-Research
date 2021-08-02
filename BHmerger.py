@@ -22,7 +22,11 @@ import pandas as pd
 
 #Merger 7
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001269/h242.cosmo50PLK.3072gst5HbwK1BH.001269')
-s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001344/h242.cosmo50PLK.3072gst5HbwK1BH.001344')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001344/h242.cosmo50PLK.3072gst5HbwK1BH.001344')
+
+#Merger 8
+s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001536/h242.cosmo50PLK.3072gst5HbwK1BH.001536')
+
 
 h=s.halos()
 s.physical_units()
@@ -31,8 +35,7 @@ print("Redshift:",s.properties['z'])
 #function to find black holes:
 def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
-    BHfilter = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75288953))
-    #BHfilter = np.where((s.stars['iord']==75289317)|(s.stars['iord']==75289686))
+    BHfilter = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75289347))
     BH = s.stars[BHfilter]
     return BH
 BH = findBH(s)
