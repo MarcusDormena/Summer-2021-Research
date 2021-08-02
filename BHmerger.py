@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from pynbody import filt, array
 import pandas as pd
 
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000288/h242.cosmo50PLK.3072gst5HbwK1BH.000288')
-s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
+s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000288/h242.cosmo50PLK.3072gst5HbwK1BH.000288')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
 h=s.halos()
 s.physical_units()
 print(pynbody.analysis.cosmology.age(s),"Gyrs old")
@@ -13,8 +13,8 @@ print("Redshift:",s.properties['z'])
 #function to find black holes:
 def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
-    #BHfilter = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75288848))
-    BHfilter = np.where((s.stars['iord']==75289317)|(s.stars['iord']==75289686))
+    BHfilter = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75288848))
+    #BHfilter = np.where((s.stars['iord']==75289317)|(s.stars['iord']==75289686))
     BH = s.stars[BHfilter]
     return BH
 BH = findBH(s)
