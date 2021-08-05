@@ -6,7 +6,7 @@ import pandas as pd
 
 #Mergers 1 and 2
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000192/h242.cosmo50PLK.3072gst5HbwK1BH.000192')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
+s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
 
 #Mergers 3 and 4
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000288/h242.cosmo50PLK.3072gst5HbwK1BH.000288')
@@ -38,7 +38,7 @@ import pandas as pd
 
 #Merger 11
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002592/h242.cosmo50PLK.3072gst5HbwK1BH.002592')
-s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002688/h242.cosmo50PLK.3072gst5HbwK1BH.002688')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002688/h242.cosmo50PLK.3072gst5HbwK1BH.002688')
 
 #Merger 12
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001536/h242.cosmo50PLK.3072gst5HbwK1BH.001536')
@@ -51,7 +51,7 @@ print("Redshift:",s.properties['z'])
 #function to find black holes:
 def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
-    BHfilter = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75288614))
+    BHfilter = np.where((s.stars['iord']==75288848)|(s.stars['iord']==75289477))
     BH = s.stars[BHfilter]
     return BH
 BH = findBH(s)
