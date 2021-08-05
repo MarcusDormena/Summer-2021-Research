@@ -4,9 +4,11 @@ import matplotlib.pyplot as plt
 from pynbody import filt, array
 import pandas as pd
 
+#For mergers, adjust snapshot times twice, after you see bwK1BH."blah". That's where you adjust the times
+
 #Mergers 1 and 2
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000192/h242.cosmo50PLK.3072gst5HbwK1BH.000192')
-s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
 
 #Mergers 3 and 4
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000288/h242.cosmo50PLK.3072gst5HbwK1BH.000288')
@@ -51,6 +53,8 @@ print("Redshift:",s.properties['z'])
 #function to find black holes:
 def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
+ 
+#[iord]== "blah" is where you add the BH ID #, put more massive BH first    
     BHfilter = np.where((s.stars['iord']==75288848)|(s.stars['iord']==75289477))
     BH = s.stars[BHfilter]
     return BH
@@ -68,6 +72,7 @@ BHhalos = findBHhalos(s)
 #distance=np.zeros(len(BH))
 #BHhalos_array=np.zeros(len(BH))
 #BH_iord=np.zeros(len(BH))
+
 #For data, the number before len is the number of columns you want
 data=np.zeros((4,len(BH)))
 #print(data.shape)
@@ -87,6 +92,8 @@ for i in range(len(BH)):
     data[2][i] = ((x**2+y**2+z**2)**0.5)[0]
     data[3][i] = starmass
 data=np.transpose(data)
+
+#Name each successive column, must be same number as you put for in data!
 df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
 df=df[df['Host Galaxy']!=0]
 df=str(df)
