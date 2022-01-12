@@ -7,8 +7,8 @@ import pandas as pd
 #For mergers, adjust snapshot times twice, after you see bwK1BH."blah". That's where you adjust the times
 
 #Mergers 1 and 2
-s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000192/h242.cosmo50PLK.3072gst5HbwK1BH.000192')
-s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000192/h242.cosmo50PLK.3072gst5HbwK1BH.000192')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
 
 #Mergers 3 and 4
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000288/h242.cosmo50PLK.3072gst5HbwK1BH.000288')
@@ -43,8 +43,8 @@ s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h
 #s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002688/h242.cosmo50PLK.3072gst5HbwK1BH.002688')
 
 #Merger 12
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001536/h242.cosmo50PLK.3072gst5HbwK1BH.001536')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001536/h242.cosmo50PLK.3072gst5HbwK1BH.001536')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.003840/h242.cosmo50PLK.3072gst5HbwK1BH.003840')
+#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.003936/h242.cosmo50PLK.3072gst5HbwK1BH.003936')
 
 h=s.halos()
 s.physical_units()
@@ -66,7 +66,7 @@ def findBH(s):
     BHfilter9 = np.where((s.stars['iord']==75288614)|(s.stars['iord']==75288843))
     BHfilter10 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75288553))
     BHfilter11 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75288614))
-    BHfilter12 = np.where((s.stars['iord']==75288509)|(s.stars['iord']==75289317))
+    BHfilter12 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75289317))
 
     BH[1] = s.stars[BHfilter]
     BH[2] = s.stars[BHfilter2]
