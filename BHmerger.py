@@ -65,15 +65,16 @@ BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,752
 k=0
 for j in range(nfilenames):
     print("j = ",j)
-    
-    #There needs to be a new "k" for every two j's here
-
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
     print(pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
-    
+
+if j%2 != 0:
+    k = k+2
+    print("k = ",k)
+
 #[iord]== "blah" is where you add the BH ID #, put more massive BH first    
 
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
