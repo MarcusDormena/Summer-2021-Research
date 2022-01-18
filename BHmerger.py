@@ -65,6 +65,9 @@ BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,752
 k=0
 for j in range(nfilenames):
     print("j = ",j)
+    
+    #There needs to be a new "k" for every two j's here
+
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
@@ -73,8 +76,8 @@ for j in range(nfilenames):
     
 #[iord]== "blah" is where you add the BH ID #, put more massive BH first    
 
-    print("k = ",k)
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
+    print("k = ",k)
     BH = s.stars[BHfilter]
 
 #    BHfilter = np.where((s.stars['iord']==75288848)|(s.stars['iord']==75289477))
@@ -111,7 +114,7 @@ for j in range(nfilenames):
 #    print BH[i]
 
 #    return BH
-BH = findBH(s)
+#BH = findBH(s)
 #print("The number of Black Holes is",len(BH))
 
 #Function to find which halo (galaxy) the BH is in:
