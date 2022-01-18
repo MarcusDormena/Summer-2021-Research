@@ -73,7 +73,6 @@ for j in range(nfilenames):
 
     if j%2 != 0:
         k = k+2
-        print("k = ",k)
 
 #[iord]== "blah" is where you add the BH ID #, put more massive BH first    
 
