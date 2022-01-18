@@ -71,9 +71,9 @@ for j in range(nfilenames):
     print(pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
 
-if j%2 != 0:
-    k = k+2
-    print("k = ",k)
+    if j%2 != 0:
+        k = k+2
+        print("k = ",k)
 
 #[iord]== "blah" is where you add the BH ID #, put more massive BH first    
 
