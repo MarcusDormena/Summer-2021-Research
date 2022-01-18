@@ -8,7 +8,7 @@ import pandas as pd
 
 nfilenames = len(filenamelist)  # this will be 24 when all the files are entered.
 #nfilenames = 24  # delete this line later
-​
+
 BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,75288740,75288565,75288831,75288505,75289109,75288553,75288953,75288553,75289347,75288614,75288843,75288505,75288553,75288505,75288614,75288505,75289317]
 
 #For mergers, adjust snapshot times twice, after you see bwK1BH."blah". That's where you adjust the times
