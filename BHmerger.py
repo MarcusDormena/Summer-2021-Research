@@ -62,23 +62,33 @@ BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,752
 #def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
 
+#####j is merger #, k is BH ID
+
+n=0
 k=0
+
+#as long as j is between 0 and 23, print it
 for j in range(nfilenames):
-    print("j = ",j)
+    if j%2==0 and j!=0:
+        k=k+2
+
+    print(" ")
+    print("Round ",n+1)    
+    print ("j = ",j)
+    print ("k = ",k)
+    n=n+1
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
     print(pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
 
-    if j%2 != 0:
-        k = k+2
-
 #[iord]== "blah" is where you add the BH ID #, put more massive BH first    
 
-    BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
-    print("k = ",k)
-    BH = s.stars[BHfilter]
+BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
+BH = s.stars[BHfilter]
+
+#What about "for h=j+2, j==j+2, then the cycle repeats until j=24
 
 #    BHfilter = np.where((s.stars['iord']==75288848)|(s.stars['iord']==75289477))
 #    BHfilter2 = np.where((s.stars['iord']==75289317)|(s.stars['iord']==75289686))
