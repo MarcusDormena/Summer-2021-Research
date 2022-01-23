@@ -62,7 +62,9 @@ BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,752
 #def findBH(s):
     #BHfilter = pynbody.filt.LowPass('tform', 0.0)
 
-#####j is merger #, k is BH ID
+###############################################################################    
+#############j is just the counter, k is the more massive BH ID################
+###############################################################################
 
 n=0
 k=0
@@ -80,6 +82,8 @@ for j in range(nfilenames):
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
+
+#This is printing info about the j'th BH
     print(pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
 
@@ -138,6 +142,8 @@ BHhalos = findBHhalos(s)
 #distance=np.zeros(len(BH))
 #BHhalos_array=np.zeros(len(BH))
 #BH_iord=np.zeros(len(BH))
+
+#print(len(BH))
 
 #For data, the number before len is the number of columns you want
 data=np.zeros((4,len(BH)))
