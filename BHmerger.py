@@ -63,7 +63,7 @@ BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,752
 
 n=0
 k=0
-distance=data[2][i] = ((x**2+y**2+z**2)**0.5)
+
 #Function to find which halo (galaxy) the BH is in:     
 def findBHhalos(s):
     BHhalos = BH['amiga.grp']
@@ -122,6 +122,7 @@ for j in range(nfilenames):
          x=BH['pos'][[i],0]
          y=BH['pos'][[i],1]
          z=BH['pos'][[i],2]
+         distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
          print(starmass)
          print(x)
