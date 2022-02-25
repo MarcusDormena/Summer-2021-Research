@@ -74,7 +74,10 @@ def findBHhalos(s):
      BHhalos = BH['amiga.grp']
      return BHhalos
      BHhalos = findBHhalos(s)
- 
+
+#BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
+#BH =  s.stars[BHfilter]
+
 #as long as j is between 0 and 23, print it
 for j in range(nfilenames):
     if j%2==0 and j!=0:
@@ -88,39 +91,37 @@ for j in range(nfilenames):
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
-
-#This is printing info about the j'th BH
+    BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
+    BH =  s.stars[BHfilter]
+    
+    #This is printing info about the j'th BH
     print(pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
 
-#[iord]== "blah" is where you add the BH ID #, put more massive BH first    
+    #[iord]== "blah" is where you add the BH ID #, put more massive BH first
+    #int i = 0
+    #for (i<13):
+    #    i = i+1
+    #    print BH[i]
 
-     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
-     BH =  s.stars[BHfilter]
+    #    return BH
+    #BH = findBH(s)
+    #print("The number of Black Holes is",len(BH))
+    #print("These are the galaxies:", BHhalos)
 
-#int i = 0
-#for (i<13):
-#    i = i+1
-#    print BH[i]
+    #distance=np.zeros(len(BH))
+    #BHhalos_array=np.zeros(len(BH))
+    #BH_iord=np.zeros(len(BH))
 
-#    return BH
-#BH = findBH(s)
-#print("The number of Black Holes is",len(BH))
-#print("These are the galaxies:", BHhalos)
+    #print(len(BH))
 
-#distance=np.zeros(len(BH))
-#BHhalos_array=np.zeros(len(BH))
-#BH_iord=np.zeros(len(BH))
-
-#print(len(BH))
-
-#For data, the number before len is the number of columns you want
-     data=np.zeros((4,len(BH)))
-#print(data.shape)
+    #For data, the number before len is the number of columns you want
+    data=np.zeros((4,len(BH)))
+    #print(data.shape)
               
-#This will skip all of the "0" galaxies because the zeros will mess the code up
-     f = open("findingBH.txt", "a")
-     for i in range(len(BH)):
+    #This will skip all of the "0" galaxies because the zeros will mess the code up
+    f = open("findingBH.txt", "a")
+    for i in range(len(BH)):
          if BHhalos[i] ==0:
              continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
@@ -132,12 +133,12 @@ for j in range(nfilenames):
          data[1][i] = BHhalos[i]
          data[2][i] = ((x**2+y**2+z**2)**0.5)[0]
          data[3][i] = starmass
-     data=np.transpose(data)
-
-#Name each successive column, must be same number as you put for in data!
-     df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
-     df=df[df['Host Galaxy']!=0]
-     df=str(df)
-     print(df)
-     f.write(df)
+         data=np.transpose(data)
+     
+         #Name each successive column, must be same number as you put for in data!
+    df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
+    df=df[df['Host Galaxy']!=0]
+    df=str(df)
+    print(df)
+    f.write(df)
 f.close()
