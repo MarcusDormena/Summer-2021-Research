@@ -111,28 +111,32 @@ for j in range(nfilenames):
 
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
-    #print(data.shape)
+    print(data.shape)
               
     #This will skip all of the "0" galaxies because the zeros will mess the code up
     f = open("findingBH.txt", "a")
+    print("len(BH) =",len(BH))
     for i in range(len(BH)):
          if BHhalos[i] ==0:
              continue
+         print("Data:",data)
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
          y=BH['pos'][[i],1]
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
-         print(starmass)
-         print(x)
-         print(y)
-         print(z)
-         print(i)
-         data[0][i] = BH['iord'][i]
-         data[1][i] = BHhalos[i]
-         data[2][i] = distance
-         data[3][i] = starmass
+         print("Starmass: ",starmass)
+         print("x =",x)
+         print("y =",y)
+         print("z =",z)
+         print("i =",i)
+         print("Distance: ",distance)
+         #Data format below is wrong! With the indexing
+         data[0,i] = BH['iord'][i]
+         data[1,i] = BHhalos[i]
+         data[2,i] = distance[0]
+         data[3,i] = starmass
          data=np.transpose(data)
      
          #Name each successive column, must be same number as you put for in data!
