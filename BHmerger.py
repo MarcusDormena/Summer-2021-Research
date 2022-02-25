@@ -64,6 +64,11 @@ BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,752
 n=0
 k=0
 
+#Function to find which halo (galaxy) the BH is in:     
+def findBHhalos(s):
+    BHhalos = BH['amiga.grp']
+    return BHhalos
+
 #as long as j is between 0 and 23, print it
 for j in range(nfilenames):
     if j%2==0 and j!=0:
@@ -77,13 +82,10 @@ for j in range(nfilenames):
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
+    #print [iord]k and k+1 here
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
     BH =  s.stars[BHfilter]
 
-    #Function to find which halo (galaxy) the BH is in:     
-    def findBHhalos(s):
-         BHhalos = BH['amiga.grp']
-         return BHhalos
     BHhalos = findBHhalos(s)
     
     #This is printing info about the j'th BH
