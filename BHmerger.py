@@ -95,40 +95,8 @@ for j in range(nfilenames):
 
 #[iord]== "blah" is where you add the BH ID #, put more massive BH first    
 
-########I need to create an array for BHfilter########
-
-          BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
+     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
      BH =  s.stars[BHfilter]
-
-#What about "for h=j+2, j==j+2, then the cycle repeats until j=24
-
-#    BHfilter = np.where((s.stars['iord']==75288848)|(s.stars['iord']==75289477))
-#    BHfilter2 = np.where((s.stars['iord']==75289317)|(s.stars['iord']==75289686))
-#    BHfilter3 = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75288848))
-#    BHfilter4 = np.where((s.stars['iord']==75288614)|(s.stars['iord']==75288740))
-#    BHfilter5 = np.where((s.stars['iord']==75288565)|(s.stars['iord']==75288831))
-#    BHfilter6 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75289109))
-#    BHfilter7 = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75288953))
-#    BHfilter8 = np.where((s.stars['iord']==75288553)|(s.stars['iord']==75289347))
-#    BHfilter9 = np.where((s.stars['iord']==75288614)|(s.stars['iord']==75288843))
-#    BHfilter10 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75288553))
-#    BHfilter11 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75288614))
-#    BHfilter12 = np.where((s.stars['iord']==75288505)|(s.stars['iord']==75289317))
-
-#    BH[1] = s.stars[BHfilter]
-#    BH[2] = s.stars[BHfilter2]
-#    BH[3] = s.stars[BHfilter3]
-#    BH[4] = s.stars[BHfilter4]
-#    BH[5] = s.stars[BHfilter5]
-#    BH[6] = s.stars[BHfilter6]
-#    BH[7] = s.stars[BHfilter7]
-#    BH[8] = s.stars[BHfilter8]
-#    BH[9] = s.stars[BHfilter9]
-#    BH[10] = s.stars[BHfilter10]
-#    BH[11] = s.stars[BHfilter11]
-#    BH[12] = s.stars[BHfilter12]
-
-    #Maybe insert for loop here? For BH
 
 #int i = 0
 #for (i<13):
