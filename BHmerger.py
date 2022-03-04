@@ -83,7 +83,7 @@ for j in range(nfilenames):
     h=s.halos()
     s.physical_units()
     print("BH #1 =", BHiordlist[k])
-    print("BH #2=", BHiordlist[k+1])
+    print("BH #2 =", BHiordlist[k+1])
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
     BH =  s.stars[BHfilter]
 
