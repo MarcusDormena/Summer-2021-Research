@@ -82,7 +82,6 @@ for j in range(nfilenames):
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
-    #print [iord]k and k+1 here
     print("BH #1 =", BHiordlist[k])
     print("BH #2=", BHiordlist[k+1])
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
