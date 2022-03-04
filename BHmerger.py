@@ -138,7 +138,7 @@ for j in range(nfilenames):
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
          data[3,i] = starmass
-         data=np.transpose(data)
+         #data=np.transpose(data)
      
          #Name each successive column, must be same number as you put for in data!
     df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
