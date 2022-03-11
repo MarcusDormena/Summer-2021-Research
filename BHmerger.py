@@ -139,11 +139,15 @@ for j in range(nfilenames):
          data[2,i] = distance[0]
          data[3,i] = starmass
      
-         #Name each successive column, must be same number as you put for in data!
+
+        #Name each successive column, must be same number as you put for in data!
+    print("Data =",data)
+    data=np.transpose(data)
+    print("Data =",data)
+    #Data should be transposed here because I have 4 columns, not 4 rows
     df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
     df=df[df['Host Galaxy']!=0]
     df=str(df)
     print(df)
     f.write(df)
-data=np.transpose(data)
 f.close()
