@@ -11,56 +11,6 @@ nfilenames = len(filenamelist)  # this will be 24 when all the files are entered
 
 BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,75288740,75288565,75288831,75288505,75289109,75288553,75288953,75288553,75289347,75288614,75288843,75288505,75288553,75288505,75288614,75288505,75289317]
 
-#For mergers, adjust snapshot times twice, after you see bwK1BH."blah". That's where you adjust the times
-
-#Mergers 1 and 2
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000192/h242.cosmo50PLK.3072gst5HbwK1BH.000192')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000225/h242.cosmo50PLK.3072gst5HbwK1BH.000225')
-
-#Mergers 3 and 4
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000288/h242.cosmo50PLK.3072gst5HbwK1BH.000288')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000347/h242.cosmo50PLK.3072gst5HbwK1BH.000347')
-
-#Merger 5
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000384/h242.cosmo50PLK.3072gst5HbwK1BH.000384')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000456/h242.cosmo50PLK.3072gst5HbwK1BH.000456')
-
-#Merger 6
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000637/h242.cosmo50PLK.3072gst5HbwK1BH.000637')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.000672/h242.cosmo50PLK.3072gst5HbwK1BH.000672')
-
-#Merger 7
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001269/h242.cosmo50PLK.3072gst5HbwK1BH.001269')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001344/h242.cosmo50PLK.3072gst5HbwK1BH.001344')
-
-#Merger 8
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001536/h242.cosmo50PLK.3072gst5HbwK1BH.001536')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.001632/h242.cosmo50PLK.3072gst5HbwK1BH.001632')
-
-#Merger 9
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002400/h242.cosmo50PLK.3072gst5HbwK1BH.002400')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002496/h242.cosmo50PLK.3072gst5HbwK1BH.002496')
-
-#Merger 10
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002592/h242.cosmo50PLK.3072gst5HbwK1BH.002592')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002688/h242.cosmo50PLK.3072gst5HbwK1BH.002688')
-
-#Merger 11
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002592/h242.cosmo50PLK.3072gst5HbwK1BH.002592')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.002688/h242.cosmo50PLK.3072gst5HbwK1BH.002688')
-
-#Merger 12
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.003840/h242.cosmo50PLK.3072gst5HbwK1BH.003840')
-#s=pynbody.load('/mnt/data0/jillian/h242/h242.cosmo50PLK.3072gst5HbwK1BH.003936/h242.cosmo50PLK.3072gst5HbwK1BH.003936')
-
-#function to find black holes:
-#def findBH(s):
-    #BHfilter = pynbody.filt.LowPass('tform', 0.0)
-
-###############################################################################    
-#############j is just the counter, k is the more massive BH ID################
-###############################################################################
-
 n=0
 k=0
 
@@ -92,23 +42,6 @@ for j in range(nfilenames):
     #This is printing info about the j'th BH
     print(pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
-
-    #[iord]== "blah" is where you add the BH ID #, put more massive BH first
-    #int i = 0
-    #for (i<13):
-    #    i = i+1
-    #    print BH[i]
-
-    #    return BH
-    #BH = findBH(s)
-    #print("The number of Black Holes is",len(BH))
-    #print("These are the galaxies:", BHhalos)
-
-    #distance=np.zeros(len(BH))
-    #BHhalos_array=np.zeros(len(BH))
-    #BH_iord=np.zeros(len(BH))
-
-    #print(len(BH))
 
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
