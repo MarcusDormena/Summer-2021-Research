@@ -42,15 +42,12 @@ for j in range(nfilenames):
 
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
-    print(data.shape)
-
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findingBH.txt", "a")
     print("len(BH) =",len(BH))
     for i in range(len(BH)):
          if BHhalos[i] ==0:
              continue
-#         print("Data:",data)
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
          y=BH['pos'][[i],1]
@@ -68,11 +65,11 @@ for j in range(nfilenames):
          data[2,i] = distance[0]
          data[3,i] = starmass
 
-        #Name each successive column, must be same number as you put for in data!                                                                                                    
-#    print("Data =",data)
+         #Name each successive column, must be same number as you put for in data!
     data=np.transpose(data)
+    #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                            
     print("Data =",data)
-    #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                             
+    
     df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
     df=df[df['Host Galaxy']!=0]
     df=str(df)
