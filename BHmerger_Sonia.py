@@ -17,34 +17,52 @@ def findBHhalos(s):
     BHhalos = BH['amiga.grp']
     return BHhalos
 
+#print("# of BH's or seomthing",nfilenames)
 #as long as j is between 0 and 23, print it
 for j in range(nfilenames):
+######################Something about this j loop is wrong
+    if j==0:
+        print("                                                                                       Merger #", n+1)
+        print(" ")
+        print ("j = ",j)
+        print ("k = ",k)
+        print("                                                                      Before Merger")
+        print("Primary BH: ", BHiordlist[k])
+        print("Secondary BH: ", BHiordlist[k+1])
+        n=n+1
+
+    if j%2==1:
+        print ("j = ",j)
+        print ("k = ",k)
+        print("                                                                      After Merger")
+        print("Merged BH: ", BHiordlist[k])
+    
     if j%2==0 and j!=0:
         k=k+2
+        print("                                                                                       Merger #",n+1)
+        print(" ")
+        print ("j = ",j)
+        print ("k = ",k)
+        print("                                                                      Before Merger")
+        print("Primary BH: ", BHiordlist[k])
+        print("Secondary BH: ", BHiordlist[k+1])
+        n=n+1        
 
-    print(" ")
-    print("Round ",n+1)    
-    print ("j = ",j)
-    print ("k = ",k)
-    n=n+1
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
-    print("BH #1 =", BHiordlist[k])
-    print("BH #2 =", BHiordlist[k+1])
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s)
     
     #This is printing info about the j'th BH
-    print(pynbody.analysis.cosmology.age(s),"Gyrs old")
+    print("Age: ",pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
 
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findingBH.txt", "a")
-    print("len(BH) =",len(BH))
     for i in range(len(BH)):
          if BHhalos[i] ==0:
              continue
@@ -58,18 +76,15 @@ for j in range(nfilenames):
          print("x =",x)
          print("y =",y)
          print("z =",z)
-         print("i =",i)
          print("Distance: ",distance)
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
          data[3,i] = starmass
-
          #Name each successive column, must be same number as you put for in data!
     data=np.transpose(data)
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                            
     print("Data =",data)
-    
     df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
     df=df[df['Host Galaxy']!=0]
     df=str(df)
