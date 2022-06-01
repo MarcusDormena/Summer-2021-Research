@@ -10,7 +10,7 @@ nfilenames = len(filenamelist)  # this will be 24 when all the files are entered
 BHiordlist = [75288848,75289477,75289317,75289686,75288553,75288848,75288614,75288740,75288565,75288831,75288505,75289109,75288553,75288953,75288553,75289347,75288614,75288843,75288505,75288553,75288505,75288614,75288505,75289317]
 
 n=0
-k=0
+k=-2
 
 #Function to find which halo (galaxy) the BH is in:     
 def findBHhalos(s):
@@ -20,33 +20,29 @@ def findBHhalos(s):
 #as long as j is between 0 and 23, print it
 for j in range(nfilenames):
     if j%2==0:
+        k=k+2
         print("                                                                                       Merger #", (2+k)/2)
-        print("                                                                      Before Merger")
-        print ("j = ",j)
-        print ("k = ",k)
+        print("                                                                   Before Merger")
         print(" ")
         print("Primary BH: ", BHiordlist[k])
         print("Secondary BH: ", BHiordlist[k+1])
         
     if j%2==1:
-        print("                                                                      After Merger")
-        print ("j = ",j)
-        print ("k = ",k)
+        print("                                                                   After Merger")
         print(" ")
         print("Merged BH: ", BHiordlist[k])
+
     n=n+1        
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
-    k=k+2
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s)
     
     #This is printing info about the j'th BH
     print("Age: ",pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
-
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
@@ -60,10 +56,24 @@ for j in range(nfilenames):
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
-         # Insert for loop here in order to print "Primary BH x = ..."
-         print("x =",x)
-         print("y =",y)
-         print("z =",z)
+         if j%2==0:
+             if i==0:
+                 print("Primary BH x =",x)
+                 print("Primary BH y =",y)
+                 print("Primary BH z =",z)
+                 print(" ")
+             
+             if i==1:
+                 print("Secondary BH x =",x)
+                 print("Secondary BH y =",y)
+                 print("Secondary BH z =",z)
+                 print(" ")
+
+         else:
+                 print("Merged BH x =",x)
+                 print("Merged BH y =",y)
+                 print("Merged BH z =",z)
+                 print(" ")
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
