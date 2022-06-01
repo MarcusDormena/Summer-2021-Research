@@ -17,41 +17,29 @@ def findBHhalos(s):
     BHhalos = BH['amiga.grp']
     return BHhalos
 
-#print("# of BH's or seomthing",nfilenames)
 #as long as j is between 0 and 23, print it
 for j in range(nfilenames):
-######################Something about this j loop is wrong
-    if j==0:
-        print("                                                                                       Merger #", n+1)
-        print(" ")
+    if j%2==0:
+        print("                                                                                       Merger #", (2+k)/2)
+        print("                                                                      Before Merger")
         print ("j = ",j)
         print ("k = ",k)
-        print("                                                                      Before Merger")
+        print(" ")
         print("Primary BH: ", BHiordlist[k])
         print("Secondary BH: ", BHiordlist[k+1])
-        n=n+1
-
+        
     if j%2==1:
-        print ("j = ",j)
-        print ("k = ",k)
         print("                                                                      After Merger")
-        print("Merged BH: ", BHiordlist[k])
-    
-    if j%2==0 and j!=0:
-        k=k+2
-        print("                                                                                       Merger #",n+1)
-        print(" ")
         print ("j = ",j)
         print ("k = ",k)
-        print("                                                                      Before Merger")
-        print("Primary BH: ", BHiordlist[k])
-        print("Secondary BH: ", BHiordlist[k+1])
-        n=n+1        
-
+        print(" ")
+        print("Merged BH: ", BHiordlist[k])
+    n=n+1        
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
+    k=k+2
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s)
     
@@ -72,11 +60,10 @@ for j in range(nfilenames):
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
-         print("Starmass: ",starmass)
+         # Insert for loop here in order to print "Primary BH x = ..."
          print("x =",x)
          print("y =",y)
          print("z =",z)
-         print("Distance: ",distance)
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
@@ -84,7 +71,6 @@ for j in range(nfilenames):
          #Name each successive column, must be same number as you put for in data!
     data=np.transpose(data)
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                            
-    print("Data =",data)
     df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
     df=df[df['Host Galaxy']!=0]
     df=str(df)
