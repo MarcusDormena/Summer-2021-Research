@@ -15,7 +15,6 @@ def findBHhalos(s):
     BHhalos = BH['amiga.grp']
     return BHhalos
 
-#as long as j is between 0 and 23, print it
 for j in range(nfilenames):
     if j%2==0:
         k=k+2
@@ -37,7 +36,7 @@ for j in range(nfilenames):
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s)
     
-    #This is printing info about the j'th BH
+    #This is printing info about each BH
     print("Age: ",pynbody.analysis.cosmology.age(s),"Gyrs old")
     print("Redshift:",s.properties['z'])
     #For data, the number before len is the number of columns you want
