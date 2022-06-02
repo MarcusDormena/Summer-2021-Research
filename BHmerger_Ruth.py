@@ -10,7 +10,21 @@ filenamelist =  ['/mnt/data0/jillian/h229/h229.cosmo50PLK.3072gst5HbwK1BH.000107
 nfilenames = len(filenamelist)
 
 BHiordlist = [60352791, 60353219, 60352780, 60353758, 60352791, 60354626, 60352912, 60353166, 60352780, 60353759, 60352780, 60353024, 60352780, 60352867, 60352986, 60354630, 60352780, 60353760, 60352791, 60354588, 60352780, 60352912]
-#name these ones after street fighter characters? Ryu, blanka, e. honda, ken, dhalsym, m. bison, guile, chun-li, 
+#These are the BH Codenames
+#2791 = Ryu
+#3219 = Ken
+#2780 = Akuma
+#3758 = Blanka
+#4626 = Chun-Li
+#2912 = Guile
+#3166 = Dhalsim
+#3759 = E. Honda
+#3024 = M. Bison
+#2867 = Dan
+#2986 = Gouken
+#4630 = Cammy
+#3760 = Juri
+#4588 = Fang
 
 k=-2
 #Function to find which halo (galaxy) the BH is in:     
@@ -48,6 +62,9 @@ for j in range(nfilenames):
     f = open("findingBH.txt", "a")
     for i in range(len(BH)):
          if BHhalos[i] ==0:
+             print("Halo = ", BHhalos[i])
+             print("Skiping because Halo = 0")
+            
              continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
