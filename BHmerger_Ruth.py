@@ -28,7 +28,13 @@ BHiordlist = [60352791, 60353219, 60352780, 60353758, 60352791, 60354626, 603529
 
 k=-2
 #Function to find which halo (galaxy) the BH is in:     
+def findBH(s):
+    BHfilter = pynbody.filt.LowPass('tform', 0.0)
+    BH = s.stars[BHfilter]
+    return BH
+
 def findBHhalos(s):
+    BH = findBH(s)
     BHhalos = BH['amiga.grp']
     return BHhalos
 
