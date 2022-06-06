@@ -33,8 +33,8 @@ def findBH(s):
     BH = s.stars[BHfilter]
     return BH
 
-def findBHhalos(s):
-    BH = findBH(s)
+def findBHhalos(s, BH):
+#    BH = findBH(s)
     BHhalos = BH['amiga.grp']
     return BHhalos
 
@@ -57,7 +57,7 @@ for j in range(nfilenames):
     s.physical_units()
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
     BH =  s.stars[BHfilter]
-    BHhalos = findBHhalos(s)
+    BHhalos = findBHhalos(s, BH)
     
     #This is printing info about each BH
     print("Age: ",pynbody.analysis.cosmology.age(s),"Gyrs old")
