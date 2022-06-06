@@ -33,6 +33,9 @@ for j in range(nfilenames):
         print(" ")
         print("Merged BH: ", BHiordlist[k])
 
+    print("Snapshot: ",filenamelist[j])
+    print("j =",j)
+    print("k =", k)
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
