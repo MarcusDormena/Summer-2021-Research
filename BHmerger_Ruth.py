@@ -58,7 +58,6 @@ for j in range(nfilenames):
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s, BH)
     
-    #This is printing info about each BH
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
@@ -73,24 +72,6 @@ for j in range(nfilenames):
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
-         if j%2==0:
-             if i==0:
-                 print("Primary BH x =",x)
-                 print("Primary BH y =",y)
-                 print("Primary BH z =",z)
-                 print(" ")
-             
-             if i==1:
-                 print("Secondary BH x =",x)
-                 print("Secondary BH y =",y)
-                 print("Secondary BH z =",z)
-                 print(" ")
-
-         else:
-                 print("Merged BH x =",x)
-                 print("Merged BH y =",y)
-                 print("Merged BH z =",z)
-                 print(" ")
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
