@@ -12,7 +12,13 @@ BHiordlist = []
 
 k=-2
 #Function to find which halo (galaxy) the BH is in:     
+def findBH(s):
+    BHfilter = pynbody.filt.LowPass('tform', 0.0)
+    BH = s.stars[BHfilter]
+    return BH
+
 def findBHhalos(s):
+    BH = findBH(s)
     BHhalos = BH['amiga.grp']
     return BHhalos
 
@@ -45,8 +51,10 @@ for j in range(nfilenames):
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findingBH.txt", "a")
     for i in range(len(BH)):
-         if BHhalos[i] ==0:
-             continue
+        if BHhalos[i] ==0:
+             print("Halo = ", BHhalos[i])
+             print("Skiping because Halo = 0")
+            continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
          y=BH['pos'][[i],1]
