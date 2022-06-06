@@ -51,6 +51,8 @@ for j in range(nfilenames):
     f = open("findingBH.txt", "a")
     for i in range(len(BH)):
          if BHhalos[i] ==0:
+             print("Halo = ", BHhalos[i])
+             print("Skiping because Halo = 0")
              continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
