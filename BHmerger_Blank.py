@@ -48,7 +48,6 @@ for j in range(nfilenames):
     f = open("findingBH.txt", "a")
     for i in range(len(BH)):
         if BHhalos[i] ==0:
-             print("Halo = ", BHhalos[i])
              print("Skiping because Halo = 0")
             continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
@@ -57,24 +56,6 @@ for j in range(nfilenames):
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
-         if j%2==0:
-             if i==0:
-                 print("Primary BH x =",x)
-                 print("Primary BH y =",y)
-                 print("Primary BH z =",z)
-                 print(" ")
-             
-             if i==1:
-                 print("Secondary BH x =",x)
-                 print("Secondary BH y =",y)
-                 print("Secondary BH z =",z)
-                 print(" ")
-
-         else:
-                 print("Merged BH x =",x)
-                 print("Merged BH y =",y)
-                 print("Merged BH z =",z)
-                 print(" ")
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
