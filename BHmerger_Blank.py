@@ -17,8 +17,7 @@ def findBH(s):
     BH = s.stars[BHfilter]
     return BH
 
-def findBHhalos(s):
-    BH = findBH(s)
+def findBHhalos(s, BH):
     BHhalos = BH['amiga.grp']
     return BHhalos
 
@@ -41,11 +40,8 @@ for j in range(nfilenames):
     s.physical_units()
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
     BH =  s.stars[BHfilter]
-    BHhalos = findBHhalos(s)
+    BHhalos = findBHhalos(s, BH)
     
-    #This is printing info about each BH
-    print("Age: ",pynbody.analysis.cosmology.age(s),"Gyrs old")
-    print("Redshift:",s.properties['z'])
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
