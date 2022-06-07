@@ -33,9 +33,6 @@ for j in range(nfilenames):
         print(" ")
         print("Merged BH: ", BHiordlist[k])
 
-    print("Snapshot: ",filenamelist[j])
-    print("j =",j)
-    print("k =", k)
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
@@ -46,10 +43,9 @@ for j in range(nfilenames):
     #For data, the number before len is the number of columns you want
     data=np.zeros((4,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
-    f = open("findingBH.txt", "a")
+    f = open("findBH.txt", "a")
     for i in range(len(BH)):
          if BHhalos[i] ==0:
-             print("Skiping because Halo = 0")
              continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
