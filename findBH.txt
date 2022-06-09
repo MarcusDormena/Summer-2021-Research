@@ -1,66 +1,53 @@
-   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
 0      75288848.0          2.0        0.254808        1.207958e+07
-1      75289477.0          2.0        1.419262        1.207958e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288848.0          2.0         1.48759        1.232836e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75289477.0          2.0        1.419262        1.207958e+07
+0      75288848.0          2.0         1.48759        1.232836e+07
 0      75289317.0         10.0        0.053025        2.561616e+06
-1      75289686.0         10.0        0.350843        2.561616e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75289317.0          8.0        0.128887        4.175172e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75289686.0         10.0        0.350843        2.561616e+06
+0      75289317.0          8.0        0.128887        4.175172e+06
 0      75288553.0          1.0        0.003364        2.270048e+07
-1      75288848.0          1.0        0.608847        2.270048e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288553.0          1.0        0.001048        4.251418e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288848.0          1.0        0.608847        2.270048e+07
+0      75288553.0          1.0        0.001048        4.251418e+07
 0      75288614.0          2.0        5.549128        2.871703e+07
-1      75288740.0          2.0        0.002864        2.871703e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288614.0          2.0        0.442138        1.010404e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288740.0          2.0        0.002864        2.871703e+07
+0      75288614.0          2.0        0.442138        1.010404e+08
 0      75288565.0          6.0        0.445755        7.710219e+07
-1      75288831.0          6.0        0.184755        7.710219e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288565.0          7.0        0.185417        1.145532e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288831.0          6.0        0.184755        7.710219e+07
+0      75288565.0          7.0        0.185417        1.145532e+08
 0      75288505.0          3.0        0.001131        3.675434e+08
-1      75289109.0          3.0        1.008059        3.675434e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288505.0          3.0        0.000229        4.394758e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75289109.0          3.0        1.008059        3.675434e+08
+0      75288505.0          3.0        0.000229        4.394758e+08
 0      75288553.0          1.0        0.000025        2.063096e+10
-1      75288953.0          1.0        0.832574        2.063096e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288553.0          1.0        0.000016        2.417576e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288953.0          1.0        0.832574        2.063096e+10
+0      75288553.0          1.0        0.000016        2.417576e+10
 0      75288553.0          1.0        0.000016        3.277956e+10
-1      75289347.0          1.0        0.840378        3.277956e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288553.0          1.0        0.000029        4.219915e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75289347.0          1.0        0.840378        3.277956e+10
+0      75288553.0          1.0        0.000029        4.219915e+10
 0      75288614.0          1.0       39.798691        7.370728e+10
-1      75288843.0          1.0       39.997705        7.370728e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288614.0          1.0       19.080713        7.636970e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288843.0          1.0       39.997705        7.370728e+10
+0      75288614.0          1.0       19.080713        7.636970e+10
 0      75288505.0          1.0        1.080654        7.878047e+10
-1      75288553.0          1.0        0.153234        7.878047e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288505.0          1.0        0.000009        8.033855e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288553.0          1.0        0.153234        7.878047e+10
+0      75288505.0          1.0        0.000009        8.033855e+10
 0      75288505.0          1.0        1.080654        7.878047e+10
-1      75288614.0          1.0       10.301876        7.878047e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288505.0          1.0        0.000009        8.033855e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75288614.0          1.0       10.301876        7.878047e+10
+0      75288505.0          1.0        0.000009        8.033855e+10
 0      75288505.0          1.0        0.000004        8.659917e+10
-1      75289317.0          1.0        0.797539        8.659917e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      75288505.0          1.0        0.000013        8.711733e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      75289317.0          1.0        0.797539        8.659917e+10
+0      75288505.0          1.0        0.000013        8.711733e+10
+
 0      60352791.0          2.0        0.258926        5.336931e+06
-1      60353219.0        232.0        0.009914        4.158971e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.004905        1.038005e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          7.0        0.043366        3.007165e+06
-1      60353758.0          7.0        0.418950        3.007165e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          2.0        3.517342        5.816814e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60353219.0        232.0        0.009914        4.158971e+06
 0      60352791.0          4.0        0.004905        1.038005e+07
-1      60354626.0          4.0        1.327063        1.038005e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          2.0        0.004092        1.552806e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352912.0          3.0        0.009914        1.721022e+07
-1      60353166.0          3.0        0.686575        1.721022e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352912.0          4.0        0.001276        1.772866e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.183482        2.927993e+07
-1      60353759.0          1.0        0.585502        2.927993e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          2.0        0.258926        5.336931e+06
-1      60353219.0        232.0        0.009914        4.158971e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.004905        1.038005e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
 0      60352780.0          7.0        0.043366        3.007165e+06
-1      60353758.0          7.0        0.418950        3.007165e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          2.0        3.517342        5.816814e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60353758.0          7.0        0.418950        3.007165e+06
+0      60352780.0          2.0        3.517342        5.816814e+06
 0      60352791.0          4.0        0.004905        1.038005e+07
-1      60354626.0          4.0        1.327063        1.038005e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          2.0        0.004092        1.552806e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60354626.0          4.0        1.327063        1.038005e+07
+0      60352791.0          2.0        0.004092        1.552806e+07
 0      60352912.0          3.0        0.009914        1.721022e+07
-1      60353166.0          3.0        0.686575        1.721022e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352912.0          4.0        0.001276        1.772866e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60353166.0          3.0        0.686575        1.721022e+07
+0      60352912.0          4.0        0.001276        1.772866e+07
+
 0      60352780.0          1.0        0.183482        2.927993e+07
 1      60353759.0          1.0        0.585502        2.927993e+07Empty DataFrame
 Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass]
@@ -69,53 +56,19 @@ Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
 1      60353024.0          1.0        0.602789        2.927993e+07Empty DataFrame
 Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass]
 Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+
 0      60352780.0          1.0        0.000145        1.873757e+09
-1      60352867.0          1.0        1.346858        1.873757e+09   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.000114        3.642836e+09   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60352867.0          1.0        1.346858        1.873757e+09
+0      60352780.0          1.0        0.000114        3.642836e+09
 0      60352986.0          6.0        2.233837        8.985346e+07
-1      60354630.0          6.0        2.116557        8.985346e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352986.0          6.0        2.000378        1.086352e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60354630.0          6.0        2.116557        8.985346e+07
+0      60352986.0          6.0        2.000378        1.086352e+08
 0      60352780.0          1.0        0.000036        1.858218e+10
-1      60353760.0          1.0        0.546516        1.858218e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.000015        2.259383e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60353760.0          1.0        0.546516        1.858218e+10
+0      60352780.0          1.0        0.000015        2.259383e+10
 0      60352791.0          4.0        0.000748        2.872316e+08
-1      60354588.0          4.0        0.604756        2.872316e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.000174        2.954691e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60354588.0          4.0        0.604756        2.872316e+08
+0      60352791.0          4.0        0.000174        2.954691e+08
 0      60352780.0          1.0        0.148783        6.122162e+10
-1      60352912.0          1.0        0.913446        6.122162e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.242658        6.271256e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          2.0        0.258926        5.336931e+06
-1      60353219.0        232.0        0.009914        4.158971e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.004905        1.038005e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          7.0        0.043366        3.007165e+06
-1      60353758.0          7.0        0.418950        3.007165e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          2.0        3.517342        5.816814e+06   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.004905        1.038005e+07
-1      60354626.0          4.0        1.327063        1.038005e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          2.0        0.004092        1.552806e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352912.0          3.0        0.009914        1.721022e+07
-1      60353166.0          3.0        0.686575        1.721022e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352912.0          4.0        0.001276        1.772866e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.183482        2.927993e+07
-1      60353759.0          1.0        0.585502        2.927993e+07Empty DataFrame
-Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass]
-Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.183482        2.927993e+07
-1      60353024.0          1.0        0.602789        2.927993e+07Empty DataFrame
-Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass]
-Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.000145        1.873757e+09
-1      60352867.0          1.0        1.346858        1.873757e+09   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.000114        3.642836e+09   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352986.0          6.0        2.233837        8.985346e+07
-1      60354630.0          6.0        2.116557        8.985346e+07   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352986.0          6.0        2.000378        1.086352e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.000036        1.858218e+10
-1      60353760.0          1.0        0.546516        1.858218e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.000015        2.259383e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.000748        2.872316e+08
-1      60354588.0          4.0        0.604756        2.872316e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352791.0          4.0        0.000174        2.954691e+08   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
-0      60352780.0          1.0        0.148783        6.122162e+10
-1      60352912.0          1.0        0.913446        6.122162e+10   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass
+1      60352912.0          1.0        0.913446        6.122162e+10
 0      60352780.0          1.0        0.242658        6.271256e+10
