@@ -39,13 +39,12 @@ for j in range(nfilenames):
     BHfilter = np.where((s.stars['iord']==BHiordlist[k])|(s.stars['iord']==BHiordlist[k+1]))
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s, BH)
-    
     #For data, the number before len is the number of columns you want
-    data=np.zeros((4,len(BH)))
+    data=np.zeros((5,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findBH.txt", "a")
     for i in range(len(BH)):
-         if BHhalos[i] ==0:
+         if BHhalos[i] == 0:
              continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
@@ -53,10 +52,15 @@ for j in range(nfilenames):
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
+         redshift = s.properties['z']
+#         mass ratio = 
+
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
          data[3,i] = starmass
+         data[4,i] = redshift
+#         data[5,i] = mass ratio         
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                            
     data=np.transpose(data)
     #Name each successive column, must be same number as you put for in data!
