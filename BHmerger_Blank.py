@@ -6,6 +6,8 @@ import pandas as pd
 
 #filenamelist = ['/mnt/data0/jillian/h2((simulation #!))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time Before Merger))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time Before Merger))','/mnt/data0/jillian/h2((simulation #!))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time After Merger))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time After Merger))']
 
+MassRatio_list = []
+
 nfilenames = len(filenamelist)  # this is the number of mergers times 2. because each merger has 2 BH's
 
 BHiordlist = []
@@ -57,18 +59,19 @@ for j in range(nfilenames):
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
          redshift = s.properties['z']
-#         mass ratio = 
+         if i%2==0:
+             MassRatio = MassRatio_list[i/2]
 
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
          data[3,i] = starmass
          data[4,i] = redshift
-#         data[5,i] = mass ratio         
+         data[5,i] = MassRatio
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                       
     data=np.transpose(data)
     #Name each successive column, must be same number as you put for in data!
-    df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass'])
+    df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass','Redshift','Mass Ratio'])
     df=df[df['Host Galaxy']!=0]
     df=str(df)
     print(df)
