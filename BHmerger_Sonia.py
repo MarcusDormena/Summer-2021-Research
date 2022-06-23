@@ -20,7 +20,7 @@ def findBH(s):
 def findBHhalos(s, BH):
     BHhalos = BH['amiga.grp']
     return BHhalos
-
+k=-2
 for j in range(nfilenames):
     if j%2==0:
         k=k+2
