@@ -28,8 +28,6 @@ BHiordlist = [60352791, 60353219, 60352780, 60353758, 60352791, 60354626, 603529
 #4588 = Fang
 
 k=-2
-j = k/2
-MassRatio = MassRatio_list[j]
 #Function to find which halo (galaxy) the BH is in:     
 def findBH(s):
     BHfilter = pynbody.filt.LowPass('tform', 0.0)
@@ -43,17 +41,16 @@ def findBHhalos(s, BH):
 for j in range(nfilenames):
     if j%2==0:
         k=k+2
+        l = k//2
+        MassRatio = MassRatio_list[l]
         print("                                                                                       Merger #", (2+k)//2)
         print("                                                                   Before Merger")
-        print(" ")
         print("Primary BH: ", BHiordlist[k])
         print("Secondary BH: ", BHiordlist[k+1])
-        print("Mass Ratio: ",MassRatio)    
         
     if j%2==1:
         print("")
         print("                                                                   After Merger")
-        print(" ")
         print("Merged BH: ", BHiordlist[k])
 
     s = pynbody.load(filenamelist[j])
@@ -66,9 +63,6 @@ for j in range(nfilenames):
     data=np.zeros((6,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findBH.txt", "a")
-#    p=i/2
-#    int(i)
-#    int(p)
     for i in range(len(BH)):
          if BHhalos[i] == 0:
              print("Skiping because Halo = 0")
