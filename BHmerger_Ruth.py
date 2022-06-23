@@ -28,6 +28,8 @@ BHiordlist = [60352791, 60353219, 60352780, 60353758, 60352791, 60354626, 603529
 #4588 = Fang
 
 k=-2
+j = k/2
+MassRatio = MassRatio_list[j]
 #Function to find which halo (galaxy) the BH is in:     
 def findBH(s):
     BHfilter = pynbody.filt.LowPass('tform', 0.0)
@@ -41,19 +43,19 @@ def findBHhalos(s, BH):
 for j in range(nfilenames):
     if j%2==0:
         k=k+2
-        print("                                                                                       Merger #", (2+k)/2)
+        print("                                                                                       Merger #", (2+k)//2)
         print("                                                                   Before Merger")
         print(" ")
         print("Primary BH: ", BHiordlist[k])
         print("Secondary BH: ", BHiordlist[k+1])
-        print("Mass Ratio: ",MassRatio[k/2])
+        print("Mass Ratio: ",MassRatio)    
         
     if j%2==1:
+        print("")
         print("                                                                   After Merger")
         print(" ")
         print("Merged BH: ", BHiordlist[k])
-        print("Mass Ratio: ",MassRatio[k/2])
-        
+
     s = pynbody.load(filenamelist[j])
     h=s.halos()
     s.physical_units()
@@ -61,9 +63,12 @@ for j in range(nfilenames):
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s, BH)
     #For data, the number before len is the number of columns you want
-    data=np.zeros((5,len(BH)))
+    data=np.zeros((6,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findBH.txt", "a")
+#    p=i/2
+#    int(i)
+#    int(p)
     for i in range(len(BH)):
          if BHhalos[i] == 0:
              print("Skiping because Halo = 0")
@@ -75,9 +80,6 @@ for j in range(nfilenames):
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
          redshift = s.properties['z']
-         if i%2==0:
-             MassRatio = MassRatio_list[i/2]
-
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
          data[2,i] = distance[0]
