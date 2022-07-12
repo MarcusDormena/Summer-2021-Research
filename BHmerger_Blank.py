@@ -28,7 +28,7 @@ for j in range(nfilenames):
         k=k+2
         l = k//2
         MassRatio = MassRatio_list[l]
-        print("                                                                                       Merger #", (2+k)//2)
+        print("                                                                                          Merger #", (2+k)//2)
         print("                                                                   Before Merger")
         print("Primary BH: ", BHiordlist[k])
         print("Secondary BH: ", BHiordlist[k+1])
