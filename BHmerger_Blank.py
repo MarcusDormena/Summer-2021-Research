@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from pynbody import filt, array
 import pandas as pd
 
-#filenamelist = ['/mnt/data0/jillian/h2((simulation #!))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time Before Merger))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time Before Merger))','/mnt/data0/jillian/h2((simulation #!))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time After Merger))/h2((simulation #)).cosmo50PLK.3072gst5HbwK1BH.((Time After Merger))']
+############ Use "snapshot.times.list" to get snapshots of before merger time and after
+#filenamelist = ['/mnt/data0/jillian/h((simulation path #))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot Before Merger))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot Before Merger))','/mnt/data0/jillian/h((simulation path #))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot After Merger))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot After Merger))']
 
 MassRatio_list = []
 
@@ -50,8 +51,8 @@ for j in range(nfilenames):
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findingBH.txt", "a")
     for i in range(len(BH)):
-        if BHhalos[i] ==0:
-             print("Skiping because Halo = 0")
+         if BHhalos[i] ==0:
+            print("Skiping because Halo = 0")
             continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
          x=BH['pos'][[i],0]
