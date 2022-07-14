@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 from pynbody import filt, array
 import pandas as pd
 
+######### The first thing you need to do is to change directory to the file path provided by Jillian
 ############ Use "snapshot.times.list" to get snapshots of before merger time and after
+
 #filenamelist = ['/mnt/data0/jillian/h((simulation path #))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot Before Merger))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot Before Merger))','/mnt/data0/jillian/h((simulation path #))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot After Merger))/h((simulation path #)).cosmo50PLK.3072gst5HbwK1BH.((Snapshot After Merger))']
 
 MassRatio_list = []
