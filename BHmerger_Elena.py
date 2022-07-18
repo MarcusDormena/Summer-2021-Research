@@ -48,7 +48,7 @@ for j in range(nfilenames):
     #For data, the number before len is the number of columns you want
     data=np.zeros((6,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
-    f = open("findingBH.txt", "a")
+    f = open("findBH.txt", "a")
     for i in range(len(BH)):
          if BHhalos[i] ==0:
              print("Skiping because Halo = 0")
