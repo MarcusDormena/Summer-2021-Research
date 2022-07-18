@@ -4,16 +4,18 @@ import matplotlib.pyplot as plt
 from pynbody import filt, array
 import pandas as pd
 
-#Here is the merger info for Merger # 1. It has no data:
-#'/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000107/h148.cosmo50PLK.3072g3HbwK1BH.000107','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000139/h148.cosmo50PLK.3072g3HbwK1BH.000139'
+#Merger info for Merger # 1. It has no data:
+#########Snapshots: '/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000107/h148.cosmo50PLK.3072g3HbwK1BH.000107','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000139/h148.cosmo50PLK.3072g3HbwK1BH.000139'
+############Primary: 101863741, Secondary: 101863762
+#########Mass ratio: 0.0391214
 
 filenamelist = ['/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000974/h148.cosmo50PLK.3072g3HbwK1BH.000974','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001024/h148.cosmo50PLK.3072g3HbwK1BH.001024','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001408/h148.cosmo50PLK.3072g3HbwK1BH.001408','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001740/h148.cosmo50PLK.3072g3HbwK1BH.001740','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001740/h148.cosmo50PLK.3072g3HbwK1BH.001740','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.002048/h148.cosmo50PLK.3072g3HbwK1BH.002048','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.002688/h148.cosmo50PLK.3072g3HbwK1BH.002688','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.002816/h148.cosmo50PLK.3072g3HbwK1BH.002816']
 
-MassRatio_list = [0.0391214, 0.00894852, 0.518367, 0.920125, 0.257822]
+MassRatio_list = [0.00894852, 0.518367, 0.920125, 0.257822]
 
 nfilenames = len(filenamelist)
 
-BHiordlist = [101863741, 101863762, 101863565, 101863705, 101863741, 101863769, 101863510, 101863741, 101863565, 101863727]
+BHiordlist = [101863565, 101863705, 101863741, 101863769, 101863510, 101863741, 101863565, 101863727]
 
 k=-2
 #Function to find which halo (galaxy) the BH is in:     
@@ -53,7 +55,7 @@ for j in range(nfilenames):
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findBH.txt", "a")
     for i in range(len(BH)):
-         if BHhalos[i] ==0:
+         if BHhalos[i] == 0:
             print("Skiping because Halo = 0")
             continue
          pynbody.analysis.halo.center(h[BHhalos[i]], mode='hyb')
