@@ -95,13 +95,5 @@
 0      0270          1        0.168859        2.929011e+10  1.093969    0.016327
 1      1872          1        0.407868        2.929011e+10  1.093969    0.016327
 0      0270          1        0.084252        3.307094e+10  0.999772    0.016327
-   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863741.0          1.0        1.423103        9.691792e+09  1.999371    0.039121   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863741.0          1.0        2.730719        1.181563e+10  1.898475    0.039121   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863565.0          3.0        0.000839        7.138957e+08  1.324819    0.008949   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863565.0          3.0        0.630159        8.189998e+08  0.999772    0.008949   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863741.0          1.0        1.339767        6.966514e+10  0.999772    0.518367Empty DataFrame
-Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass, Redshift, Mass Ratio]
-Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863510.0          1.0        0.050056        1.224220e+11  0.440524    0.920125   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio
-0     101863510.0          1.0        0.000016        1.284434e+11  0.387711    0.920125
+
+
