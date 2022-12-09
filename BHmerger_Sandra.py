@@ -6,8 +6,8 @@ import pandas as pd
 
 #Merger info for Merger # 1. It has no data:
 #########Snapshots: '/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000107/h148.cosmo50PLK.3072g3HbwK1BH.000107','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000139/h148.cosmo50PLK.3072g3HbwK1BH.000139'
-############Primary: 101863741, Secondary: 101863762
-#########Mass ratio: 0.0391214
+############  Primary: 101863741, Secondary: 101863762
+#########     Mass ratio: 0.0391214
 
 filenamelist = ['/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.000974/h148.cosmo50PLK.3072g3HbwK1BH.000974','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001024/h148.cosmo50PLK.3072g3HbwK1BH.001024','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001408/h148.cosmo50PLK.3072g3HbwK1BH.001408','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001740/h148.cosmo50PLK.3072g3HbwK1BH.001740','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.001740/h148.cosmo50PLK.3072g3HbwK1BH.001740','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.002048/h148.cosmo50PLK.3072g3HbwK1BH.002048','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.002688/h148.cosmo50PLK.3072g3HbwK1BH.002688','/mnt/data0/jillian/h148/h148.cosmo50PLK.3072g3HbwK1BH.002816/h148.cosmo50PLK.3072g3HbwK1BH.002816']
 
@@ -51,7 +51,7 @@ for j in range(nfilenames):
     BHhalos = findBHhalos(s, BH)
     
     #For data, the number before len is the number of columns you want
-    data=np.zeros((6,len(BH)))
+    data=np.zeros((7,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findBH.txt", "a")
     for i in range(len(BH)):
@@ -71,6 +71,7 @@ for j in range(nfilenames):
          data[3,i] = starmass
          data[4,i] = redshift
          data[5,i] = MassRatio
+         data[6,i] = BHMass
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                       
     data=np.transpose(data)
     #Name each successive column, must be same number as you put for in data!

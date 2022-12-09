@@ -60,7 +60,7 @@ for j in range(nfilenames):
     BH =  s.stars[BHfilter]
     BHhalos = findBHhalos(s, BH)
     #For data, the number before len is the number of columns you want
-    data=np.zeros((6,len(BH)))
+    data=np.zeros((7,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
     f = open("findBH.txt", "a")
     for i in range(len(BH)):
@@ -79,7 +79,8 @@ for j in range(nfilenames):
          data[2,i] = distance[0]
          data[3,i] = starmass
          data[4,i] = redshift
-         data[5,i] = MassRatio   
+         data[5,i] = MassRatio
+         data[6,i] = BHMass
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                       
     data=np.transpose(data)
     #Name each successive column, must be same number as you put for in data!
