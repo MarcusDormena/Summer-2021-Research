@@ -112,3 +112,93 @@
 1     565            4        0.000809        1.056038e+09  0.440524    0.257822
 2     727            4        0.647377        1.056038e+09  0.440524    0.257822
 3     565            4         0.00163        1.093660e+09  0.387711    0.257822
+   Black Hole ID#  Host Galaxy  Distance (kpc)  ...   Redshift  Mass Ratio       BH Mass
+0      60352791.0          2.0        0.258926  ...  11.991963    0.191031  5.776994e+05
+1      60353219.0        232.0        0.009914  ...  11.991963    0.191031  3.019447e+06
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352791.0          4.0        0.004905  ...  9.954491    0.191031  3.611217e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...   Redshift  Mass Ratio       BH Mass
+0      60352780.0          7.0        0.043366  ...  11.991963    0.021644  2.325793e+06
+1      60353758.0          7.0        0.418950  ...  11.991963    0.021644  5.034763e+04
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          2.0        3.517342  ...  9.954491    0.021644  2.376893e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352791.0          4.0        0.004905  ...  9.954491    0.291805  3.611217e+06
+1      60354626.0          4.0        1.327063  ...  9.954491    0.291805  1.053759e+06
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352791.0          2.0        0.004092  ...  7.986498    0.291805  4.714995e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352912.0          3.0        0.009914  ...  9.954491    0.728774  7.109550e+06
+1      60353166.0          3.0        0.686575  ...  9.954491    0.728774  9.749466e+06
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352912.0          4.0        0.001276  ...  7.986498    0.728774  1.693113e+07
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.183482  ...  7.862925    0.021094  2.383251e+06
+1      60353759.0          1.0        0.585502  ...  7.862925    0.021094  5.027468e+04
+
+[2 rows x 7 columns]Empty DataFrame
+Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass, Redshift, Mass Ratio, BH Mass]
+Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.183482  ...  7.862925    0.854044  2.383251e+06
+1      60353024.0          1.0        0.602789  ...  7.862925    0.854044  2.850174e+06
+
+[2 rows x 7 columns]Empty DataFrame
+Columns: [Black Hole ID#, Host Galaxy, Distance (kpc), Total Stellar Mass, Redshift, Mass Ratio, BH Mass]
+Index: []   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.000145  ...  4.604308    0.449772  5.317962e+06
+1      60352867.0          1.0        1.346858  ...  4.604308    0.449772  2.392921e+06
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.000114  ...  3.998603    0.449772  7.715045e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352986.0          6.0        2.233837  ...  3.830519    0.478513  55627.061969
+1      60354630.0          6.0        2.116557  ...  3.830519    0.478513  26618.298655
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352986.0          6.0        2.000378  ...   3.27632    0.478513  82251.406885
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.000036  ...  2.254217     0.00651  7.715678e+06
+1      60353760.0          1.0        0.546516  ...  2.254217     0.00651  5.023256e+04
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.000015  ...  2.029147     0.00651  7.769159e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352791.0          4.0        0.000748  ...  1.838004    0.679589  4.934808e+06
+1      60354588.0          4.0        0.604756  ...  1.838004    0.679589  3.364284e+06
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352791.0          4.0        0.000174  ...  1.749244    0.679589  8.327284e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.148783  ...  0.932624    0.457031  7.907518e+06
+1      60352912.0          1.0        0.913446  ...  0.932624    0.457031  1.730184e+07
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      60352780.0          1.0        0.242658  ...  0.861553    0.457031  2.520950e+07
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      40810844.0          2.0        0.788695  ...  9.954491     0.34992  4.431234e+05
+1      40811189.0          2.0        0.351247  ...  9.954491     0.34992  1.266040e+06
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      40810844.0          5.0        0.012396  ...  7.986498     0.34992  1.710004e+06
+
+[1 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      40810270.0          1.0        3.093080  ...  2.254217    0.007622  6.892241e+06
+1      40810454.0          1.0        0.720411  ...  2.254217    0.007622  5.260919e+04
+
+[2 rows x 7 columns]   Black Hole ID#  Host Galaxy  Distance (kpc)  ...  Redshift  Mass Ratio       BH Mass
+0      40810270.0          1.0        1.970698  ...  2.029147    0.007622  6.958272e+06
+
+[1 rows x 7 columns]
