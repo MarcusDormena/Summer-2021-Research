@@ -1,3 +1,4 @@
+
 import numpy as np
 import pynbody
 import matplotlib.pyplot as plt
@@ -75,7 +76,7 @@ for j in range(nfilenames):
     #Data should be transposed here because I have 4 columns, not 4 rows                                                                                                       
     data=np.transpose(data)
     #Name each successive column, must be same number as you put for in data!
-    df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass','Redshift','Mass Ratio'])
+    df = pd.DataFrame(data=data, columns=['Black Hole ID#','Host Galaxy','Distance (kpc)', 'Total Stellar Mass','Redshift','Mass Ratio', 'BH Mass'])
     df=df[df['Host Galaxy']!=0]
     df=str(df)
     print(df)
