@@ -48,7 +48,7 @@ for j in range(nfilenames):
     #For data, the number before len is the number of columns you want
     data=np.zeros((7,len(BH)))
     #This will skip all of the "0" galaxies because the zeros will mess the code up                                                                                                 
-    f = open("findBH.txt", "a")
+    f = open("findBH_Elena.txt", "w")
     for i in range(len(BH)):
          if BHhalos[i] == 0:
              print("Skiping because Halo = 0")
@@ -59,6 +59,7 @@ for j in range(nfilenames):
          z=BH['pos'][[i],2]
          distance=((x**2+y**2+z**2)**0.5)
          starmass = h[BHhalos[i]].s['mass'].sum()
+         print(starmass)
          redshift = s.properties['z']
          data[0,i] = BH['iord'][i]
          data[1,i] = BHhalos[i]
