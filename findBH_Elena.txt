@@ -1,0 +1,3 @@
+   Black Hole ID#  Host Galaxy  Distance (kpc)  Total Stellar Mass  Redshift  Mass Ratio       BH Mass
+0      40810270.0          1.0        0.084252        3.307094e+10  0.999772    0.016327  7.084542e+06
+1      40811872.0          1.0        0.407868        2.929011e+10  1.093969    0.016327  1.138130e+05
